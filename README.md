@@ -11,7 +11,8 @@ sudo mv terraform /usr/local/bin/terraform
 
 ## Run Sample
 
-1. Create the `terraform.tfvars` file with the access data to AzureRM and AmazonWS
+1. Create the `terraform.tfvars` file with the credentials to access Azure and Amazon WS ([How to get ARM credentials](https://www.terraform.io/docs/providers/azurerm/#creating-credentials) )
+1. Run `terraform get`
 1. Run `terraform plan`
 1. Run `terraform apply`
 

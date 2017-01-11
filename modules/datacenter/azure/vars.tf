@@ -25,3 +25,7 @@ variable "location" {
 variable "net_prefix" {
   type = "string"
 }
+
+variable "subnet_prefixes" {
+  type = "map"
+}

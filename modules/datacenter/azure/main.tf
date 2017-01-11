@@ -10,13 +10,13 @@ provider "azurerm" {
 # Create a resource group
 resource "azurerm_resource_group" "net" {
   provider = "azurerm.${var.alias}"
-  name     = "v-${var.alias}-net"
+  name     = "x-${var.alias}-net"
   location = "${var.location}"
 }
 
 # Create a virtual network in the web_servers resource group
 resource "azurerm_virtual_network" "default" {
-  name                = "v-${var.alias}-net-01"
+  name                = "x-${var.alias}-net-01"
   address_space       = ["${var.net_prefix}.0.0/16"]
   location            = "${var.location}"
   resource_group_name = "${azurerm_resource_group.net.name}"

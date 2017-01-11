@@ -17,3 +17,7 @@ variable "secret_key" {
 variable "net_prefix" {
   type = "string"
 }
+
+variable "subnet_prefixes" {
+  type = "map"
+}
