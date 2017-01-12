@@ -1,6 +1,6 @@
-module "eu_aws_datacenter" {
+module "e1_datacenter" {
   source          = "./modules/datacenter/aws"
-  alias           = "eu"
+  alias           = "e1"
   region          = "eu-west-2"
   access_key      = "${var.aws_access_key}"
   secret_key      = "${var.aws_secret_key}"
@@ -8,9 +8,9 @@ module "eu_aws_datacenter" {
   subnet_prefixes = "${var.subnet_prefixes}"
 }
 
-module "us_aws_datacenter" {
+module "u1_datacenter" {
   source          = "./modules/datacenter/aws"
-  alias           = "us"
+  alias           = "u1"
   region          = "us-west-1"
   access_key      = "${var.aws_access_key}"
   secret_key      = "${var.aws_secret_key}"
@@ -18,9 +18,9 @@ module "us_aws_datacenter" {
   subnet_prefixes = "${var.subnet_prefixes}"
 }
 
-module "eu_azure_datacenter" {
+module "e2_datacenter" {
   source          = "./modules/datacenter/azure"
-  alias           = "eu"
+  alias           = "e2"
   location        = "West Europe"
   subscription_id = "${var.azure_subscription_id}"
   client_id       = "${var.azure_client_id}"
@@ -30,9 +30,9 @@ module "eu_azure_datacenter" {
   subnet_prefixes = "${var.subnet_prefixes}"
 }
 
-module "us_azure_datacenter" {
+module "u2_datacenter" {
   source          = "./modules/datacenter/azure"
-  alias           = "us"
+  alias           = "u2"
   location        = "West US"
   subscription_id = "${var.azure_subscription_id}"
   client_id       = "${var.azure_client_id}"
